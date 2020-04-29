@@ -1,1 +1,2 @@
-docker build -t happy .
+docker build -t subhakarkotta/happy .
+docker push subhakarkotta/happy

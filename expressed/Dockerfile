@@ -1,4 +1,4 @@
-FROM node:10.15.0-alpine
+FROM node:10.13.0-alpine
 
 # Create app directory
 WORKDIR /usr/src/app
@@ -9,8 +9,7 @@ WORKDIR /usr/src/app
 COPY package*.json ./
 
 RUN npm install
-# If you are building your code for production
-# RUN npm install --only=production
+
 
 # Bundle app source
 COPY . .

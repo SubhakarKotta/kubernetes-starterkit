@@ -29,6 +29,7 @@ echo "*****************************************************"
 echo "Starting deployment on kubernetes cluster"
 echo "*****************************************************"
 cd ..
+kubectl apply -f k8s/namespace.yaml
 kubectl apply -f k8s/
 echo "*****************************************************"
 echo "Deployment completed successfully!"

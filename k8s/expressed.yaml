@@ -5,7 +5,7 @@ metadata:
   labels:
     run: express-svc
   name: express-svc
-  namespace: default
+  namespace: kubernetes-starterkit
 spec:
   ports:
   - port: 3000
@@ -22,7 +22,7 @@ metadata:
   labels:
     run: express-svc
   name: express-svc
-  namespace: default
+  namespace: kubernetes-starterkit
 spec:
   replicas: 1
   selector:
@@ -39,8 +39,8 @@ spec:
         run: express-svc
     spec:
       containers:
-      - image: expressed:latest
-        imagePullPolicy: Never
+      - image: subhakarkotta/expressed:latest
+        imagePullPolicy: Always
         name: express-svc
         env:
           - name: MY_SECRET
@@ -89,6 +89,7 @@ apiVersion: v1
 kind: Secret
 metadata:
   name: expressed-env
+  namespace: kubernetes-starterkit
 type: Opaque
 data:
   secret: dHJhaW5pbmcK

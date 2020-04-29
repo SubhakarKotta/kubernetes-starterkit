@@ -1,1 +1,2 @@
-docker build -t expressed .
+docker build -t subhakarkotta/expressed .
+docker push subhakarkotta/expressed

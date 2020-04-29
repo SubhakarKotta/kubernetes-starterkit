@@ -1,1 +1,2 @@
-docker build -t vuecalc .
+docker build -t subhakarkotta/vuecalc .
+docker push subhakarkotta/vuecalc

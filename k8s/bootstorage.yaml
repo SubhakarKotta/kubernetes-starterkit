@@ -5,7 +5,7 @@ metadata:
   labels:
     run: bootstorage-svc
   name: bootstorage-svc
-  namespace: default
+  namespace: kubernetes-starterkit
 spec:
   ports:
   - port: 5000
@@ -22,7 +22,7 @@ metadata:
   labels:
     run: bootstorage-svc
   name: bootstorage-svc
-  namespace: default
+  namespace: kubernetes-starterkit
 spec:
   replicas: 1
   selector:
@@ -39,8 +39,8 @@ spec:
         run: bootstorage-svc
     spec:
       containers:
-      - image: bootstorage:latest
-        imagePullPolicy: Never
+      - image: subhakarkotta/bootstorage:latest
+        imagePullPolicy: Always
         name: bootstorage-svc
         env:
           - name: REDIS_HOST
@@ -90,6 +90,7 @@ apiVersion: v1
 kind: Secret
 metadata:
   name: bootstorage-env
+  namespace: kubernetes-starterkit
 type: Opaque
 data:
   redis_password: Y2FsY3VsYXRvcg==

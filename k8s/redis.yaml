@@ -5,7 +5,7 @@ metadata:
   labels:
     run: redis
   name: redis
-  namespace: default
+  namespace: kubernetes-starterkit
 spec:
   ports:
     - port: 6379
@@ -20,7 +20,7 @@ metadata:
   labels:
     run: redis
   name: redis  
-  namespace: default
+  namespace: kubernetes-starterkit
 spec:
   selector:
     matchLabels:
